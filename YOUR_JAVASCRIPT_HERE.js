@@ -28,6 +28,11 @@ dagger = {
 
 // FUNCTIONS
 
+// Watch hero properties for changes
+// hero.watch(name, displayStats(hero));
+// hero.watch(pHealth, displayStats(hero));
+// hero.watch(weapon.type, displayStats(hero));
+// hero.watch(weapon.damage, displayStats(hero));
 
 
 function rest(person) {
@@ -59,29 +64,35 @@ function changeName() {
 
 // DISPLAYING PLAYER STATS
 
-// function displayStats(person) {
-//     // get data
-//     const name = person.name;
-//     const health = person.health;
-//     //const weaponType = person.weapon.type;
-//     //const weaponDamage = person.weapon.damage;
-//     // create HTML elements
-//     const playerStats = document.createElement('div');
-//     const pName = document.createElement('p');
-//     const pHealth = document.createElement('p');
-//     const pHealth = document.createElement('p');
-//     const pHealth = document.createElement('p');
+function displayStats(person) {
+    // get data
+    const name = person.name;
+    const health = person.health;
+    //const weaponType = person.weapon.type;
+    //const weaponDamage = person.weapon.damage;
+    // create HTML elements
+    const playerStats = document.createElement('div');
+    const pName = document.createElement('p');
+    const pHealth = document.createElement('p');
+    const pWeaponType = document.createElement('p');
+    const pWeaponDamage = document.createElement('p');
 
-//     // adjust elements
-//     pName.innerHTML = `Player name: ${name}`;
-//     pHealth.innerHTML = `Player health: ${health}`
-//     playerStats.appendChild(pName);
-//     playerStats.appendChild(pHealth);
+    // adjust elements
+    pName.innerHTML = `Player name: ${person.name}`;
+    pHealth.innerHTML = `Player health: ${person.health}`;
+    pName.innerHTML = `Weapon type: ${person.weapon.type}`;
+    pHealth.innerHTML = `Weapon damage: ${person.weapon.damage}`;
+    playerStats.appendChild(pName);
+    playerStats.appendChild(pHealth);
+    playerStats.appendChild(pWeaponType);
+    playerStats.appendChild(pWeaponDamage);
 
-//     // display elements on page
-//     const statsBox = document.getElementById("player-stats");
-//     statsBox.appendChild(playerStats);
-// }
+    // display elements on page
+    const statsBox = document.getElementById("player-stats");
+    statsBox.appendChild(playerStats);
+}
+
+displayStats(hero);
 
 // displayStats(hero)
     // 
