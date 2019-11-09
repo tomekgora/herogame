@@ -37,9 +37,10 @@ function rest(person) {
     }
 };
 
-// function pickUpItem(person,weapon) {
-//     person.inventory.push(weapon);
-// }
+function pickUpItem(person, weapon) {
+    person.inventory.push(weapon);
+    return person;
+}
 
 // function equipWeapon(person) {
 //     person.inventory
