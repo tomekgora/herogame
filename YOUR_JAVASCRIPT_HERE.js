@@ -41,7 +41,8 @@ function pickUpItem(person, weapon) {
     person.inventory.push(weapon);
     return person;
 }
-
+// Problem: what happens to the old weapon,
+// What happens to the inventory item (is it duplicated?)
 function equipWeapon(person) {
     if (person.inventory.length > 0) {
         person.weapon = person.inventory[0];
@@ -54,8 +55,26 @@ function changeName() {
 };
 
 
-// INSERT THE NAME 
+// DISPLAYING PLAYER STATS
+
+function displayStats() {
+
+}
+// DON'T FOCUS ON CSS
+// INSERT THE NAME DONE 
 
 // STATS FUNCTION 
 
 // UPDATING STATS
+
+// FIGHTING DIFFERENT ENEMIES
+
+ // FINDING AND PICKING UP ITEMS
+
+ // HEALING POTIONS
+
+ // TEXT ADVENTURE
+
+ // ABILITY TO NAVIGATE DIFFERENT ROOMS (MAYBE SINGLE ROOM IS BETTER START)
+
+ // COMMANDS: examine, take, drop, attack
