@@ -47,3 +47,15 @@ function equipWeapon(person) {
         person.weapon = person.inventory[0];
     }
 }
+
+// Change character name --- button
+function changeName() {
+    hero.name = prompt("What is your name adventurer?");
+};
+
+
+// INSERT THE NAME 
+
+// STATS FUNCTION 
+
+// UPDATING STATS
