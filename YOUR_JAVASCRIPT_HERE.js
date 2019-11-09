@@ -52,14 +52,20 @@ function rest(person) {
         alert('health maxed out');
      } else {
      person.health = 10;
-     return person;
+     displayStats(hero);
     }
+    return person;
 };
+
+
 
 function pickUpItem(person, weapon) {
     person.inventory.push(weapon);
-    return person;
+    displayStats(hero);
+//    return person;
 }
+
+
 
 // Problem: what happens to the old weapon,
 // What happens to the inventory item (is it duplicated?)
@@ -68,8 +74,10 @@ function equipWeapon(person) {
         person.weapon = person.inventory[0];
 //        displayStats(person);
     }
-    return person;
+    displayStats(hero);
 }
+
+
 
 // Change character name --- button
 function changeName() {
@@ -149,16 +157,3 @@ displayStats(hero);
 
 // STATS FUNCTION  wORKS sort of!!! 
 
-// UPDATING STATS
-
-// FIGHTING DIFFERENT ENEMIES
-
- // FINDING AND PICKING UP ITEMS
-
- // HEALING POTIONS
-
- // TEXT ADVENTURE
-
- // ABILITY TO NAVIGATE DIFFERENT ROOMS (MAYBE SINGLE ROOM IS BETTER START)
-
- // COMMANDS: examine, take, drop, attack
