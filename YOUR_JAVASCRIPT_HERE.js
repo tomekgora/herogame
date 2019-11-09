@@ -5,7 +5,8 @@ let hero = {
     name: "",
     heroic: true,
     inventory: [],
-    health: 5,
+    health: 10,
+    alive: true,
     weapon: {
         type: "",
         damage: 2,
@@ -19,7 +20,8 @@ dagger = {
 
 // let hobgoblin = {
 //     name: "Akolurg",
-//     health: 2,
+//     health: 4,
+//     alive: true,
 //     weapon: {
 //         type: "spoon",
 //         damage: 0.5,
@@ -40,13 +42,13 @@ function rest(person) {
         alert('health maxed out');
      } else {
      person.health = 10;
-     displayStats();
      return person;
     }
 };
 
 function pickUpItem(person, weapon) {
     person.inventory.push(weapon);
+    displayStats(person);
     return person;
 }
 // Problem: what happens to the old weapon,
@@ -54,7 +56,9 @@ function pickUpItem(person, weapon) {
 function equipWeapon(person) {
     if (person.inventory.length > 0) {
         person.weapon = person.inventory[0];
+        displayStats(person);
     }
+    return person;
 }
 
 // Change character name --- button
@@ -65,6 +69,10 @@ function changeName() {
 
 
 // DISPLAYING PLAYER STATS
+// has a lot of duplication cut this down if time allows
+// could be done by iterating through array of obj properties
+// try replaceChild instead of removeChild
+
 
 function displayStats(person) {
     // get data
@@ -92,10 +100,15 @@ function displayStats(person) {
     // display elements on page
     const statsBox = document.getElementById("player-stats");
    // statsBox.removeChild(statsBox.firstChild);
-    statsBox.appendChild(playerStats);
+   // statsBox.innerHTML = "";
+   statsBox.appendChild(playerStats);
 }
 
+
+
 displayStats(hero);
+// hero.watch("name", displayStats(hero));
+
 
 // displayStats(hero)
     // 
