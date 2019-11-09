@@ -12,6 +12,10 @@ let hero = {
     }
 }
 
+dagger = {
+    type: "dagger",
+    damage: 2,
+}
 
 // FUNCTIONS
 
@@ -24,7 +28,7 @@ function rest(person) {
     }
 };
 
-function pickUpItem(person,weapn) {
+function pickUpItem(person,weapon) {
     person.inventory.push(weapon);
 }
 
