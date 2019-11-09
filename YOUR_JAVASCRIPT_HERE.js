@@ -1,5 +1,6 @@
 // Write your JS here
 
+//WORLD OBJECTS
 let hero = {
     name: "",
     heroic: true,
@@ -11,6 +12,23 @@ let hero = {
     }
 }
 
-function rest() {};
-function pickUpItem() {};
-function equipWeapon() {};
+
+// FUNCTIONS
+
+function rest(person) {
+    if (person.health == 10) {
+        alert('health maxed out');
+     } else {
+     person.health = 10;
+     return person;
+    }
+};
+
+function pickUpItem(person,weapn) {
+    person.inventory.push(weapon);
+}
+
+// function equipWeapon(person) {
+//    person.inventory[0] = person.weapon;
+//     }
+// };
