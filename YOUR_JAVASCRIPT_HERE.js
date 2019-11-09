@@ -68,8 +68,8 @@ function displayStats(person) {
     // get data
     const name = person.name;
     const health = person.health;
-    //const weaponType = person.weapon.type;
-    //const weaponDamage = person.weapon.damage;
+    const weaponType = person.weapon.type;
+    const weaponDamage = person.weapon.damage;
     // create HTML elements
     const playerStats = document.createElement('div');
     const pName = document.createElement('p');
@@ -78,10 +78,10 @@ function displayStats(person) {
     const pWeaponDamage = document.createElement('p');
 
     // adjust elements
-    pName.innerHTML = `Player name: ${person.name}`;
-    pHealth.innerHTML = `Player health: ${person.health}`;
-    pName.innerHTML = `Weapon type: ${person.weapon.type}`;
-    pHealth.innerHTML = `Weapon damage: ${person.weapon.damage}`;
+    pName.innerHTML = `Player name: ${name}`;
+    pHealth.innerHTML = `Player health: ${health}`;
+    pWeaponType.innerHTML = `Weapon type: ${weaponType}`;
+    pWeaponDamage.innerHTML = `Weapon damage: ${weaponDamage}`;
     playerStats.appendChild(pName);
     playerStats.appendChild(pHealth);
     playerStats.appendChild(pWeaponType);
