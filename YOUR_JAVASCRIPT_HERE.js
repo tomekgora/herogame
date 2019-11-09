@@ -110,10 +110,16 @@ function displayStats(person) {
 
     // display elements on page
     const statsBox = document.getElementById("player-stats");
-    statsBox.removeChild(statsBox.firstChild);
+    while (statsBox.firstChild) {
+        statsBox.removeChild(statsBox.firstChild);
+    }
+  //  statsBox.removeChild(statsBox.firstChild);
     // statsBox.innerHTML = "";
     statsBox.appendChild(playerStats);
 }
+
+//
+
 
 // function combat(person, enemy){
 // };
