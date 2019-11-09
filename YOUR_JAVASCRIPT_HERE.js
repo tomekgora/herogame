@@ -57,10 +57,36 @@ function changeName() {
 
 // DISPLAYING PLAYER STATS
 
-function displayStats() {
+function displayStats(person) {
+    // get data
+    const name = person.name;
+    const health = person.health;
+    //const weaponType = person.weapon.type;
+    //const weaponDamage = person.weapon.damage;
+    // create HTML elements
+    const playerStats = document.createElement('div');
+    const pName = document.createElement('p');
+    const pHealth = document.createElement('p');
+    // adjust elements
+    pName.innerHTML = `Player name: ${name}`;
+    pHealth.innerHTML = `Player health: ${health}`
+    playerStats.appendChild(pName);
+    playerStats.appendChild(pHealth);
 
+    // display elements on page
+    const statsBox = document.getElementById("player-stats");
+    statsBox.appendChild(playerStats);
 }
-// DON'T FOCUS ON CSS
+
+displayStats(hero)
+    // 
+
+    // 
+
+
+
+
+// DON'T FOCUgS ON CSS
 // INSERT THE NAME DONE 
 
 // STATS FUNCTION 
