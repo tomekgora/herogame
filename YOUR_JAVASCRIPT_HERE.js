@@ -5,7 +5,7 @@ let hero = {
     name: "",
     heroic: true,
     inventory: [],
-    health: 10,
+    health: 5,
     weapon: {
         type: "",
         damage: 2,
@@ -40,6 +40,7 @@ function rest(person) {
         alert('health maxed out');
      } else {
      person.health = 10;
+     displayStats();
      return person;
     }
 };
@@ -59,6 +60,7 @@ function equipWeapon(person) {
 // Change character name --- button
 function changeName() {
     hero.name = prompt("What is your name adventurer?");
+    displayStats(hero);
 };
 
 
@@ -89,6 +91,7 @@ function displayStats(person) {
 
     // display elements on page
     const statsBox = document.getElementById("player-stats");
+   // statsBox.removeChild(statsBox.firstChild);
     statsBox.appendChild(playerStats);
 }
 
@@ -105,7 +108,7 @@ displayStats(hero);
 // DON'T FOCUgS ON CSS
 // INSERT THE NAME DONE 
 
-// STATS FUNCTION 
+// STATS FUNCTION  wORKS sort of!!! 
 
 // UPDATING STATS
 
