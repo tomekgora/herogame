@@ -18,15 +18,15 @@ dagger = {
     damage: 2,
 }
 
-// let hobgoblin = {
-//     name: "Akolurg",
-//     health: 4,
-//     alive: true,
-//     weapon: {
-//         type: "spoon",
-//         damage: 0.5,
-//     }
-// }
+let hobgoblin = {
+    name: "Akolurg",
+    health: 4,
+    alive: true,
+    weapon: {
+        type: "spoon",
+        damage: 0.5,
+    }
+}
 // CHECK IF THE HERO OBJECT IS MODIFIED
 
 // let checkRest = rest();
@@ -129,8 +129,27 @@ function displayStats(person) {
 //
 
 
-// function combat(person, enemy){
-// };
+function combat(person, enemy){
+//declare some variables
+    const personAttack = document.createElement('p');
+    personAttack.innerHTML = `You have dealt ${person.weapon.damage} damage to ${enemy.name}
+    the hobgoblin and received ${enemy.weapon.damage} damage`;
+
+//combat calculations
+    enemy.health = enemy.health - person.weapon.damange;
+    person.health = person.health - enemy.weapon.damage;
+// // status change 
+//     if (person.health < 0 ) {
+//         person.alive = false;
+//     }
+//     if (enemy.health < 0) {
+//         enemy.alive = false; 
+//     }
+// print notifications
+    const arena = document.getElementById("arena");
+    arena.appendChild(personAttack);
+    displayStats(hero);
+};
 
 
 
@@ -143,17 +162,8 @@ displayStats(hero);
 //     }
 // )
 
-// document.getElementById("myBtn").addEventListener("click", function() {
-//     alert("Hello World!");
-    // 
-
-    // 
 
 
 
 
-// DON'T FOCUgS ON CSS
-// INSERT THE NAME DONE 
-
-// STATS FUNCTION  wORKS sort of!!! 
 
