@@ -42,7 +42,6 @@ function pickUpItem(person, weapon) {
     return person;
 }
 
-// function equipWeapon(person) {
-//     person.inventory
-//     }
-// };
+function equipWeapon(person) {
+    person.weapon = person.inventory[0];
+}
