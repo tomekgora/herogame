@@ -27,6 +27,16 @@ dagger = {
 //         damage: 0.5,
 //     }
 // }
+// CHECK IF THE HERO OBJECT IS MODIFIED
+
+// let checkRest = rest();
+// let checkPickUpItem = pickUpItem();
+
+// window.rest() = function() {
+//     checkRest();
+//     console.log("REST WAS RUN")
+
+// }
 
 // FUNCTIONS
 
@@ -48,15 +58,15 @@ function rest(person) {
 
 function pickUpItem(person, weapon) {
     person.inventory.push(weapon);
-    displayStats(person);
     return person;
 }
+
 // Problem: what happens to the old weapon,
 // What happens to the inventory item (is it duplicated?)
 function equipWeapon(person) {
     if (person.inventory.length > 0) {
         person.weapon = person.inventory[0];
-        displayStats(person);
+//        displayStats(person);
     }
     return person;
 }
@@ -65,6 +75,7 @@ function equipWeapon(person) {
 function changeName() {
     hero.name = prompt("What is your name adventurer?");
     displayStats(hero);
+
 };
 
 
@@ -99,18 +110,27 @@ function displayStats(person) {
 
     // display elements on page
     const statsBox = document.getElementById("player-stats");
-   // statsBox.removeChild(statsBox.firstChild);
-   // statsBox.innerHTML = "";
-   statsBox.appendChild(playerStats);
+    statsBox.removeChild(statsBox.firstChild);
+    // statsBox.innerHTML = "";
+    statsBox.appendChild(playerStats);
 }
+
+// function combat(person, enemy){
+// };
 
 
 
 displayStats(hero);
 // hero.watch("name", displayStats(hero));
 
+// document.getElementById("dagger").addEventListener("click", function(){
+//     let daggerImage = document.getElementById("dagger");
+//     daggerImage.parentNode.removeChild(daggerImage);
+//     }
+// )
 
-// displayStats(hero)
+// document.getElementById("myBtn").addEventListener("click", function() {
+//     alert("Hello World!");
     // 
 
     // 
